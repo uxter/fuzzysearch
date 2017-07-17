@@ -47,7 +47,7 @@ public class FuzzySearchTest {
         WordsScoreStrategy strategty = new WordsScoreStrategy();
         strategty.setWeight(1);
         searcher.addScoreStrategy(strategty);
-        assertArrayEquals(resultList, searcher.search(sourceList, "ia", 10));
+        assertArrayEquals(resultList, searcher.search(sourceList, "Some", 10));
     }
 
     @Test
@@ -58,16 +58,16 @@ public class FuzzySearchTest {
                 "Some testers write some tests",
                 "Some data are used for some tests",
                 "Some testers use some data for some tests",
-                "We can look at some of the data",
-                "I wrote some code for my mobile phone",
-                "And to be certain, we need to do some tests",
                 "Some of the data could be aggregated and presented in tabular fashion",
+                "Test",
+                "Data for tests",
+                "Self-test code",
                 "They might be able to retrieve some of the data, -but it's going to take a while"
         };
         StartsWithScoreStrategy strategty = new StartsWithScoreStrategy();
         strategty.setWeight(1);
         searcher.addScoreStrategy(strategty);
-        assertArrayEquals(resultList, searcher.search(sourceList, "ia", 10));
+        assertArrayEquals(resultList, searcher.search(sourceList, "Some", 10));
     }
 
 }

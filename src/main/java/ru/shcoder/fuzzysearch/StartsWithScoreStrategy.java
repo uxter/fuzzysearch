@@ -19,16 +19,16 @@ public class StartsWithScoreStrategy extends ScoreWeight implements ScoreStrateg
      * @return Similarity Score
      */
     public double getScore(String str1, String str2) {
-        int sharedWordsCount = 0;
+        int sharedWordsStartCount = 0;
         String regSpaces = "\\s+";
         String[] strWords1 = str1.split(regSpaces);
         String[] strWords2 = str2.split(regSpaces);
-        for (String word : strWords2) {
-            /**
-             * @TODO implement
-             */
+        for (int i = 0; i < strWords2.length; i++) {
+            if (strWords1[i].contains(strWords2[i])) {
+                sharedWordsStartCount++;
+            }
         }
-        return (double)sharedWordsCount / (strWords2.length + strWords1.length - sharedWordsCount);
+        return (double)sharedWordsStartCount / (strWords2.length + strWords1.length - sharedWordsStartCount);
     }
 
 }
