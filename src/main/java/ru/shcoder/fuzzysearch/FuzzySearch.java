@@ -44,13 +44,12 @@ public class FuzzySearch implements FuzzySearchable {
      * @return Average score
      */
     private double getSimilarityScore(String text, String input) {
-        int currentWeight;
         long totalWeight = 0;
         double totalScoreWithWeight = 0;
         text = text.toLowerCase();
         input = input.toLowerCase();
         for (ScoreStrategy strategy : strategiesList) {
-            currentWeight = strategy.getWeight();
+            int currentWeight = strategy.getWeight();
             totalWeight += (long)currentWeight;
             totalScoreWithWeight += strategy.getScore(text, input) * currentWeight;
         }
