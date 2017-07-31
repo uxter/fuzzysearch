@@ -4,7 +4,7 @@ package ru.shcoder.fuzzysearch;
  * <h1>Interface ScoreStrategy</h1>
  * Similarity calculation strategy for two strings.
  *
- * @author  Vasiliy Shilov (https://github.com/shcoder-ru)
+ * @author  Vasiliy Shilov (https://github.com/uxter)
  * @version 1.0
  * @since   2017-07-17
  */
