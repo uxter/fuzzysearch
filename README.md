@@ -96,7 +96,7 @@ package ru.shcoder.fuzzysearch;
 
 /**
  * <h1>Class CustomScoreStrategy</h1>
- * Similarity calculation strategy for two strings by length
+ * Similarity calculation strategy for two strings
  *
  * @author  Vasiliy Shilov (https://github.com/uxter)
  * @version 1.0
@@ -105,13 +105,15 @@ package ru.shcoder.fuzzysearch;
 public class CustomScoreStrategy extends ScoreWeight implements ScoreStrategy {
 
     /**
-     * Get similarity score by length
+     * Get similarity score
      * @param str1 First string
      * @param str2 Second string
      * @return Similarity Score
      */
     public double getScore(String str1, String str2) {
-        return (double)str1.length() / str2.length();
+        double result;
+        // Some logic
+        return result;
     }
 
 }
