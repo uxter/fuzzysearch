@@ -4,7 +4,7 @@ package ru.shcoder.fuzzysearch;
  * <h1>Class ScoreWeight</h1>
  * Specifying impact of strategy on result
  *
- * @author  Vasiliy Shilov (https://github.com/shcoder-ru)
+ * @author  Vasiliy Shilov (https://github.com/uxter)
  * @version 1.0
  * @since   2017-07-17
  */
