@@ -6,6 +6,7 @@
 Implementing a Fuzzy Search Algorithm in Java with possible to extend by adding similarity calculation strategy.
 
 ## Classes [WordsScoreStrategy](https://github.com/uxter/fuzzysearch/blob/master/src/main/java/ru/shcoder/fuzzysearch/WordsScoreStrategy.java), [StartsWithScoreStrategy](https://github.com/uxter/fuzzysearch/blob/master/src/main/java/ru/shcoder/fuzzysearch/StartsWithScoreStrategy.java), [CharsScoreStrategy](https://github.com/uxter/fuzzysearch/blob/master/src/main/java/ru/shcoder/fuzzysearch/CharsScoreStrategy.java)
+*extends [ScoreWeight](https://github.com/uxter/fuzzysearch/blob/master/src/main/java/ru/shcoder/fuzzysearch/ScoreWeight.java)*    
 *implements [ScoreStrategy](https://github.com/uxter/fuzzysearch/blob/master/src/main/java/ru/shcoder/fuzzysearch/ScoreStrategy.java)*
 
 Create similarity calculation strategy.
@@ -88,6 +89,33 @@ String[] resultList = Searcher.search(sourceList, "Java", 10));
 <dd></dd>
 </dl>
 
+## Custom similarity calculation strategy
+
+``` java
+package ru.shcoder.fuzzysearch;
+
+/**
+ * <h1>Class CustomScoreStrategy</h1>
+ * Similarity calculation strategy for two strings by length
+ *
+ * @author  Vasiliy Shilov (https://github.com/uxter)
+ * @version 1.0
+ * @since   2017-07-31
+ */
+public class CustomScoreStrategy extends ScoreWeight implements ScoreStrategy {
+
+    /**
+     * Get similarity score by length
+     * @param str1 First string
+     * @param str2 Second string
+     * @return Similarity Score
+     */
+    public double getScore(String str1, String str2) {
+        return (double)str1.length() / str2.length();
+    }
+
+}
+```
 
 ## Note on Patches/Pull Requests
 
