@@ -9,7 +9,7 @@ import java.lang.Double;
  * <h1>Class FuzzySearch</h1>
  * Search strings by specific strategies.
  *
- * @author  Vasiliy Shilov (https://github.com/shcoder-ru)
+ * @author  Vasiliy Shilov (https://github.com/uxter)
  * @version 1.0
  * @since   2017-07-17
  */
