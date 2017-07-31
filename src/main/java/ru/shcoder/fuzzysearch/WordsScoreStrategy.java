@@ -6,7 +6,7 @@ import java.util.Arrays;
  * <h1>Class WordsScoreStrategy</h1>
  * Similarity calculation strategy for two strings by number of matching words
  *
- * @author  Vasiliy Shilov (https://github.com/shcoder-ru)
+ * @author  Vasiliy Shilov (https://github.com/uxter)
  * @version 1.0
  * @since   2017-07-17
  */
